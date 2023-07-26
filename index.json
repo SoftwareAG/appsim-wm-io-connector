@@ -1,0 +1,15 @@
+{
+  "name": "Application Simulator",
+  "description": "ApplicationSimulator",
+  "triggers": [],
+  "actions": [
+    "/v1/get_purchase_order_by_id",
+    "/v1/get_purchase_orders"
+  ],
+  "version": 1,
+  "auth_type": "custom",
+  "doc_link": "",
+  "appId": "eba10f6b-ea40-4946-962f-22a0ded626b2",
+  "guid": "e5e35e2d-6cb9-4f1b-883d-5192b974fcf1",
+  "connectionUid": "application-simulator-uXXAqxiIe"
+}
