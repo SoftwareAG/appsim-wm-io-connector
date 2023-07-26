@@ -4,13 +4,13 @@ module.exports = {
 
   name: "get_sales_order_by_customer_id",
 
-  title: "getSalesOrderByCustomerId",
+  title: "getSalesOrdersByCustomerId",
 
   description: "",
   version: "v1",
 
   input: {
-    title: "getSalesOrderByCustomerId",
+    title: "getSalesOrdersByCustomerId",
     type: "object",
     properties: {
       customerId: {
