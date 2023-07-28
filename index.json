@@ -19,7 +19,9 @@
     "/v1/get_service_request_by_id",
     "/v1/get_service_requests_by_device_id",
     "/v1/get_service_requests_by_customer_id",
-    "/v1/get_sales_orders_by_customer_id"
+    "/v1/get_sales_orders_by_customer_id",
+    "/v1/get_records",
+    "/v1/get_record_by_id"
   ],
   "version": 1,
   "auth_type": "custom",
