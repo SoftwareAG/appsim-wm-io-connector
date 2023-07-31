@@ -24,7 +24,7 @@ module.exports = {
         title: "id",
         type: "string",
         minLength: 1,
-        description: "A valid id for the selected record. (Customer ID if 'Customer By ID' is selected in dropdown)"
+        description: "A valid id for the selected record. ('customer id' if 'Customer' is selected in dropdown)"
       }
     }
   },

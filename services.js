@@ -11,7 +11,7 @@ function getOptionsForGetRequest(rootURL, credentials) {
     };
 }
 
-function getOptionsForCreateRequest(rootURL, credentials) {
+function getOptionsForCreateRequest(rootURL, credentials, requestBody) {
     // reusable function to return values required for making an HTTP GET request to Application Simulator
     return {
         method: "POST",
@@ -21,6 +21,8 @@ function getOptionsForCreateRequest(rootURL, credentials) {
         },
 
         url: rootURL,
+        body: requestBody,
+        json: true,
         qs: {},
     };
 }

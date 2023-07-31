@@ -4,7 +4,9 @@
   "triggers": [],
   "actions": [
     "/v1/get_records",
-    "/v1/get_record_by_id"
+    "/v1/get_record_by_id",
+    "/v1/create_purchase_order",
+    "/v1/create_sales_order"
   ],
   "version": 1,
   "auth_type": "custom",
