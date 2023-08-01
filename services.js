@@ -54,9 +54,25 @@ function removeSpacesAndLowerCase(inputString) {
     return lowerCaseString;
 }
 
+function pluralizeNoun(str) {
+    // function to return plural string of noun
+    if (str.endsWith("ss")) {
+        return str + "es";
+    } else if (str.endsWith("y")) {
+        return str.slice(0, -1) + "ies";
+    } else if (str.endsWith("us")) {
+        return str.slice(0, -1) + "es";
+    } else if (str.endsWith("s")) {
+        return str.slice(0, -1);
+    } else {
+        return str + "s";
+    }
+}
+
 module.exports = {
     getOptionsForGetRequest: getOptionsForGetRequest,
     getOptionsForCreateRequest: getOptionsForCreateRequest,
     makeHttpRequest: makeHttpRequest,
-    removeSpacesAndLowerCase: removeSpacesAndLowerCase
+    removeSpacesAndLowerCase: removeSpacesAndLowerCase,
+    pluralizeNoun: pluralizeNoun
 };
