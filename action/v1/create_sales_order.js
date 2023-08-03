@@ -83,7 +83,7 @@ module.exports = {
     "products": [
       {
         "id": "PROD00001",
-        "quantity": "2"
+        "quantity": 2
       }
     ]
   },

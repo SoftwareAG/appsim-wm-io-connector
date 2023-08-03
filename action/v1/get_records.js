@@ -1,4 +1,5 @@
 const services = require("../../services");
+const utils = require("../../utils");
 
 module.exports = {
 
@@ -22,12 +23,12 @@ module.exports = {
       },
       offset: {
         title: "offset",
-        type: "string",
+        type: "integer",
         description: "Starting index of record"
       },
       limit: {
         title: "limit",
-        type: "string",
+        type: "integer",
         description: "Number of records"
       }
     }
@@ -42,16 +43,16 @@ module.exports = {
   },
 
   mock_input: {
-    offset: "1",
-    limit: "10",
+    offset: 1,
+    limit: 10,
     object: "Customer"
   },
 
   execute: function (input, output) {
     // to access auth info use input.auth , eg: input.auth.username
     // and to return output use output callback like this output(null, { 'notice' : 'successful'})
-    var objectString = services.removeSpacesAndLowerCase(input.object); //reusable function in services.js
-    var resource = services.pluralizeNoun(objectString); //reusable function in services.js
+    var objectString = utils.removeSpacesAndLowerCase(input.object); //reusable function in utils.js
+    var resource = utils.pluralizeNoun(objectString); //reusable function in utils.js
     var rootURL = input.auth.tenant + resource;
     var credentials = input.auth.username + ":" + input.auth.password;
     var option = services.getOptionsForGetRequest(rootURL, credentials); //reusable function in services.js

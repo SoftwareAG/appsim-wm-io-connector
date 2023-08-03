@@ -65,11 +65,11 @@ module.exports = {
     "products": [
       {
         "id": "PROD00003",
-        "quantity": "2"
+        "quantity": 2
       },
       {
         "id": "PROD00002",
-        "quantity": "4"
+        "quantity": 4
       }
     ]
   },

@@ -23,6 +23,7 @@ module.exports = {
       },
     }
   },
+
   validate: function (input, output) {
     output(null, true);
   }
