@@ -41,7 +41,7 @@ module.exports = {
             },
             quantity: {
               title: "quantity",
-              type: "string",
+              type: "integer",
               minLength: 1,
               description: "Quantity of the product"
             }

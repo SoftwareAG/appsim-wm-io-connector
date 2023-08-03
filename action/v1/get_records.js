@@ -23,13 +23,11 @@ module.exports = {
       offset: {
         title: "offset",
         type: "string",
-        minLength: 1,
         description: "Starting index of record"
       },
       limit: {
         title: "limit",
         type: "string",
-        minLength: 1,
         description: "Number of records"
       }
     }

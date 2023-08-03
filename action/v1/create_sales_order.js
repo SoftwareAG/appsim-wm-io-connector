@@ -24,7 +24,7 @@ module.exports = {
         minLength: 1
       },
       isUrgent: {
-        title: "currencyId",
+        title: "isUrgent",
         type: "boolean",
         minLength: 1
       },
@@ -56,7 +56,7 @@ module.exports = {
             },
             quantity: {
               title: "quantity",
-              type: "string",
+              type: "integer",
               minLength: 1,
               description: "Quantity of the product"
             }
