@@ -19,7 +19,8 @@ module.exports = {
       password: {
         type: "string",
         minLength: 1,
-        title: "Password"
+        title: "Password",
+        format: "password"
       },
     }
   },
