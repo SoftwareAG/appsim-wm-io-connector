@@ -11,6 +11,7 @@ Note: If you have installed any other Node version on your system, you can:
   2. Build your app using your existing Node version and then transpile your code using a transpiler like [Babel](https://babeljs.io/).<br>
 
 The connector has been built with [wmiocli](https://docs.webmethods.io/integration/developer_guide/connector_builder/#gsc.tab=0), webmethod.io's iPaaS Connector Builder CLI tool, which must be installed.
+
 ### Installation
   1. Clone the repo `https://github.com/SoftwareAG/appsim-wm-io-connector.git`.
   2. Run `npm install -g @webmethodsio/wmiocli`.
