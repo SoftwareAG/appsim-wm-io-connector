@@ -15,7 +15,7 @@ The connector has been built with [wmiocli](https://docs.webmethods.io/integrati
   1. Clone the repo https://github.com/SoftwareAG/appsim-wm-io-connector.git .
   2. Run npm install -g @webmethodsio/wmiocli .
   3. Login to your webmethods.io tenant using wmio login .
-  4. Execute <span style="background-color: #f2f2f2">wmio init</span> to get started.
+  4. Execute <span style="background-color: #f2f2f2; padding: 2px 4px; border-radius: 4px;">wmio init</span> to get started.
   5. Finally, execute wmio deploy to deploy this connector to your tenant.
 
 Once deployed, it’ll be automatically registered with webMethods.io Integration and will be available to you locally in the Connectors panel under the Services tab.
