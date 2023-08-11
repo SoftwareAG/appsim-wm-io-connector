@@ -1,7 +1,7 @@
 # webMethods.io Integration Connector for Application Simulator
 
 ## Getting Started
-This webMethods.io Integration connector is for Application Simulator application and this documentation cover the details to further enhance, test and/ or deploy the connector on a webMethods.io Integration tenant.
+This webMethods.io Integration connector is for Application Simulator application and this documentation cover the details to further enhance, test and/ or install the connector on a webMethods.io Integration tenant.
 
 ### Prerequisites
 This connector requires following pre-requisites:
