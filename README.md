@@ -15,10 +15,12 @@ The connector has been built with [wmiocli](https://docs.webmethods.io/integrati
   1. Clone the repo `https://github.com/SoftwareAG/appsim-wm-io-connector.git`.
   2. Run `npm install -g @webmethodsio/wmiocli`.
   3. Login to your webmethods.io tenant using `wmio login`.
-  4. Execute `wmio init` to get started.
+  4. Execute `wmio test` to test the connector.
   5. Finally, execute `wmio deploy` to deploy this connector to your tenant.
 
 Once deployed, it’ll be automatically registered with webMethods.io Integration and will be available to you locally in the Connectors panel under the Services tab.
+
+NOTE- Use `wmio unpublish` to unpublish the published connector app along with triggers and actions associated with the app.
 ### AppSim Access Credentials
 If you don't have credentials to access the Application Simulator, [request here](https://daehpresal53703.hycloud.softwareag.com/AppSim/#/requestaccess). Fill in the required details and submit. You'll receive the credentials via provided email address.
 ## Usage
