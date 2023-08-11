@@ -25,8 +25,7 @@ module.exports = {
       },
       isUrgent: {
         title: "isUrgent",
-        type: "boolean",
-        minLength: 1
+        type: "boolean"
       },
       currencyId: {
         title: "currencyId",
@@ -77,7 +76,7 @@ module.exports = {
   mock_input: {
     "customerId": "CUST00001",
     "statusId": "ORD-STA-02",
-    "isUrgent": "false",
+    "isUrgent": false,
     "currencyId": "CUR-001",
     "processTypeId": "PRO-TYP-03",
     "products": [
