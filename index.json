@@ -1,6 +1,6 @@
 {
   "name": "Application Simulator",
-  "description": "ApplicationSimulator",
+  "description": "Application Simulator",
   "triggers": [],
   "actions": [
     "/v1/get_records",
@@ -11,7 +11,7 @@
   "version": 1,
   "auth_type": "custom",
   "doc_link": "",
-  "appId": "eba10f6b-ea40-4946-962f-22a0ded626b2",
-  "guid": "e5e35e2d-6cb9-4f1b-883d-5192b974fcf1",
-  "connectionUid": "application-simulator-uXXAqxiIe"
+  "appId": "a4d2a8e1-114f-4ab4-a44a-3e613092b0e1",
+  "guid": "b0df248f-47c3-4226-943c-7baba6d85fbb",
+  "connectionUid": "application-simulator-2AhQDyUqN"
 }
