@@ -9,11 +9,13 @@ This connector requires following pre-requisites:
 2. [wmiocli](https://www.npmjs.com/package/@webmethodsio/wmiocli) webMethods.io Connector Builder.
 
 ### Installation
-  1. Clone this repository `https://github.com/SoftwareAG/appsim-wm-io-connector.git`.
-  2. Run `npm install -g @webmethodsio/wmiocli`.
-  3. Run `wmio login` to login your webMethods.io Integration tenant.
-  4. Run `wmio test` to test the connector.
-  5. Finally, run `wmio deploy` to deploy this connector to your webMethods.io Integration tenant.
+  1. Clone this repository using `git clone https://github.com/SoftwareAG/appsim-wm-io-connector.git`.
+  2. Navigate to the directory `cd appsim-wm-io-connector`.
+  3. Run `npm install -g @webmethodsio/wmiocli` to install connector builder.
+  4. Run `npm install` to install required libraries.
+  5. Run `wmio login` to login your webMethods.io Integration tenant.
+  6. Run `wmio test` to test the connector.
+  7. Finally, run `wmio deploy` to deploy this connector to your webMethods.io Integration tenant.
 
 On successful deployment, it will be available under the Connectors list on the workflow canvas with the name **Application Simulator**.
 
