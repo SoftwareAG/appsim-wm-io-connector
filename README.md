@@ -23,8 +23,10 @@ On successful deployment, it will be available under the Connectors list on the 
 
 For more details on how to install and deploy the connector, refer to the webMethods.io Integration documentation for [Connector Builder - Node.js CLI](https://docs.webmethods.io/integration/developer_guide/connector_builder/#gsc.tab=0)
 
-### Application Simulator Access Credentials
-If you don't have credentials to access the Application Simulator, [request access here](https://daehpresal53703.hycloud.softwareag.com/AppSim/#/requestaccess). Fill in the required details and submit your request. Admin team will review your request and will share the access credential by an email.
+### Enhancements
+Before committing the code with fixes or enhancements, ensure the following:
+1. **App ID**, **GUID** and **Connector Connection ID** are removed from the **index.json** file.
+2. **.flowapprc** file is emptied.
 
 ## Usage
 Following actions are supported by this connector:
