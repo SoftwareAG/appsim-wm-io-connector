@@ -1,49 +1,53 @@
-function getOptionsForGetRequest(rootURL, credentials) {
+function getOptionsForGetRequest(rootURL, resource, credentials) {
     // reusable function to return values required for making an HTTP GET request to Application Simulator
     return {
-        method: "GET",
+        method: 'GET',
+        baseURL: rootURL,
+        url: resource,
         headers: {
             "Content-Type": "application/json",
             Authorization: "Basic " + Buffer.from(credentials).toString("base64"),
-        },
-        url: rootURL,
-        qs: {},
-    };
+        }
+    }
 }
 
-function getOptionsForCreateRequest(rootURL, credentials, requestBody) {
+function getOptionsForCreateRequest(rootURL, resource, credentials, requestBody) {
     // reusable function to return values required for making an HTTP GET request to Application Simulator
     return {
-        method: "POST",
+        method: 'POST',
+        baseURL: rootURL,
+        url: resource,
         headers: {
             "Content-Type": "application/json",
             Authorization: "Basic " + Buffer.from(credentials).toString("base64"),
         },
-
-        url: rootURL,
-        body: requestBody,
-        json: true,
-        qs: {},
-    };
+        data: requestBody
+    }
 }
 
 function makeHttpRequest(option, output) {
     // reusable function to make an HTTP Request
-    var request = require("request");
-    request(option, function (error, response, body) {
-        if (error) {
-            output(error);
-        }
-        else if (response.statusCode == 401) {
-            output("Invalid credentials");
-        }
-        else if (response.statusCode >= 200 || response.statusCode == 201) {
-            output(null, body);
-        }
-        else {
-            output("Something went wrong. Please check the input parameters or contact global presales team if the issue persists.");
-        }
-    });
+    const axios = require('axios');
+    try {
+        axios.request(option)
+            .then(function (response) {
+                if (response.status == 401) {
+                    return output("Invalid credentials");
+                } else if (response.status >= 200 || response.status == 201) {
+                    return output(null, response.data);
+                } else {
+                    return output({
+                        "message": "Something went wrong. Please check the input parameters or contact global presales team if the issue persists.",
+                        'text': response.text
+                    });
+                }
+            })
+            .catch(function (error) {
+                return output({ "error": error });
+            });
+    } catch (error) {
+        return output({ "error": error });
+    }
 }
 
 

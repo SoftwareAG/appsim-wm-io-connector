@@ -5,13 +5,13 @@ module.exports = {
 
   name: "get_record_by_id",
 
-  title: "getRecordById",
+  title: "Get Record By Id",
 
   description: "",
   version: "v1",
 
   input: {
-    title: "getRecordById",
+    title: "Get Record By Id",
     type: "object",
     properties: {
       object: {
@@ -46,9 +46,8 @@ module.exports = {
   execute: function (input, output) {
     var objectString = utils.removeSpacesAndLowerCase(input.object); //reusable function in utils.js
     var resource = utils.pluralizeNoun(objectString); //reusable function in utils.js
-    var rootURL = input.auth.tenant + resource + "/" + input.id;
     var credentials = input.auth.username + ":" + input.auth.password;
-    var option = services.getOptionsForGetRequest(rootURL, credentials); //reusable function in services.js
+    var option = services.getOptionsForGetRequest(input.auth.tenant, `${resource}/${input.id}`, credentials); //reusable function in services.js
     services.makeHttpRequest(option, output); //reusable function in services.js
   }
 

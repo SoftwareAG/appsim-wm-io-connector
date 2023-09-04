@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "ApplicationSimulator",
   "dependencies": {
-    "request": "2.55.0",
-    "@webmethodsio/cli-sdk": "*"
+    "@webmethodsio/cli-sdk": "*",
+    "axios": "^1.5.0"
   }
 }

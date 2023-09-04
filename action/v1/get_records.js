@@ -5,13 +5,13 @@ module.exports = {
 
   name: "get_records",
 
-  title: "getRecords",
+  title: "Get Records",
 
   description: "",
   version: "v1",
 
   input: {
-    title: "getRecords",
+    title: "Get Records",
     type: "object",
     properties: {
       object: {
@@ -53,9 +53,9 @@ module.exports = {
     // and to return output use output callback like this output(null, { 'notice' : 'successful'})
     var objectString = utils.removeSpacesAndLowerCase(input.object); //reusable function in utils.js
     var resource = utils.pluralizeNoun(objectString); //reusable function in utils.js
-    var rootURL = input.auth.tenant + resource;
     var credentials = input.auth.username + ":" + input.auth.password;
-    var option = services.getOptionsForGetRequest(rootURL, credentials); //reusable function in services.js
+    var option = services.getOptionsForGetRequest(input.auth.tenant, resource, credentials); //reusable function in services.js
+    // var option = services.getOptionsForGetRequest(rootURL, credentials); //reusable function in services.js
     services.makeHttpRequest(option, output); //reusable function in services.js
   }
 
