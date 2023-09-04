@@ -1,8 +1,10 @@
-var request = require('request');
-
 module.exports = {
   label: 'Connect to Basic',
-  mock_input: {},
+  mock_input: {
+    "tenant": "",
+    "username": "",
+    "password": ""
+  },
   input: {
     type: "object",
     properties: {

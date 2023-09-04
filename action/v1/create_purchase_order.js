@@ -4,7 +4,7 @@ module.exports = {
 
   name: "create_purchase_order",
 
-  title: "createPurchaseOrder",
+  title: "Create Purchase Order",
 
   description: "",
   version: "v1",
@@ -77,7 +77,8 @@ module.exports = {
   execute: function (input, output) {
     // to access auth info use input.auth , eg: input.auth.username
     // and to return output use output callback like this output(null, { 'notice' : 'successful'})
-    var rootURL = input.auth.tenant + "purchaseorders";
+    // var rootURL = input.auth.tenant + "purchaseorders";
+    var rootURL = input.auth.tenant;
     var credentials = input.auth.username + ":" + input.auth.password;
     var requestBody =
     {
@@ -87,7 +88,7 @@ module.exports = {
         "products": input.products
       }
     };
-    var option = services.getOptionsForCreateRequest(rootURL, credentials, requestBody); //reusable function in services.js
+    var option = services.getOptionsForCreateRequest(rootURL, 'purchaseorders', credentials, requestBody); //reusable function in services.js
     services.makeHttpRequest(option, output); //reusable function in services.js
   }
 
