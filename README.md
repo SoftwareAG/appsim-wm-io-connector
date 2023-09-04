@@ -34,6 +34,7 @@ Following actions are supported by this connector:
   2. `getRecordById`: To fetch a record by id from an object. Objects supported are Addresses, Customers, Countries, Currencies, Devices, Locations, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items and Service Requests.
   3. `createPurchaseOrder`: To create a new purchase order.
   4. `createSalesOrder`: To create a new sales order.
+  5. `createAddress`: To create a new address.
 
 ------------------------------
 
