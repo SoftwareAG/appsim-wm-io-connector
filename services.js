@@ -3,7 +3,7 @@ function getOptionsForGetRequest(rootURL, credentials) {
     return {
         method: "GET",
         headers: {
-            "Content-Type": "application/json",
+            "Accept": "application/json",
             Authorization: "Basic " + Buffer.from(credentials).toString("base64"),
         },
         url: rootURL,

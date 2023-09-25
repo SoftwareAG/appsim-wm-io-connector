@@ -14,8 +14,6 @@ function pluralizeNoun(str) {
         return str.slice(0, -1) + "ies";
     } else if (str.endsWith("us")) {
         return str.slice(0, -1) + "es";
-    } else if (str.endsWith("s")) {
-        return str.slice(0, -1);
     } else {
         return str + "s";
     }
