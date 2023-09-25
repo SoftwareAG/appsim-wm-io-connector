@@ -5,7 +5,7 @@ This webMethods.io Integration connector is for Application Simulator applicatio
 
 ### Prerequisites
 This connector requires following pre-requisites:
-1. [Node.js](https://nodejs.org/dist/) version between 8.14.0 and 10.14.2.
+1. [Node.js](https://nodejs.org/dist/) version between 10.0.0 and 14.19.2.
 2. [wmiocli](https://www.npmjs.com/package/@webmethodsio/wmiocli) webMethods.io Connector Builder.
 
 ### Installation
