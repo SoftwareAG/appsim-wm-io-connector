@@ -1,31 +1,40 @@
 # webMethods.io Integration Connector for Application Simulator
+
 ## Getting Started
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+This webMethods.io Integration connector is for Application Simulator application and this documentation cover the details to further enhance, test and/ or install the connector on a webMethods.io Integration tenant.
+
 ### Prerequisites
-This connector requires any [Node](https://nodejs.org/dist/) version between 8.14.0 and 10.14.2.
+This connector requires following pre-requisites:
+1. [Node.js](https://nodejs.org/dist/) version between 8.14.0 and 10.14.2.
+2. [wmiocli](https://www.npmjs.com/package/@webmethodsio/wmiocli) webMethods.io Connector Builder.
 
-Note: If you have installed any other Node version on your system, you can:
-  1. Use tools to switch between different versions of Node.
-     - For Windows, use [nvm-windows](https://github.com/coreybutler/nvm-windows#installation--upgrades).
-     - For Mac, use [homebrew](https://brew.sh/).
-  2. Build your app using your existing Node version and then transpile your code using a transpiler like [Babel](https://babeljs.io/).<br>
-
-The connector has been built with [wmiocli](https://docs.webmethods.io/integration/developer_guide/connector_builder/#gsc.tab=0), webmethod.io's iPaaS Connector Builder CLI tool, which must be installed.
 ### Installation
-  1. Clone the repo `https://github.com/SoftwareAG/appsim-wm-io-connector.git`.
-  2. Run `npm install -g @webmethodsio/wmiocli`.
-  3. Login to your webmethods.io tenant using `wmio login`.
-  4. Execute `wmio test` to test the connector.
-  5. Finally, execute `wmio deploy` to deploy this connector to your tenant.
+  1. Clone this repository using `git clone https://github.com/SoftwareAG/appsim-wm-io-connector.git`.
+  2. Navigate to the directory `cd appsim-wm-io-connector`.
+  3. Run `npm install -g @webmethodsio/wmiocli` to install connector builder.
+  4. Run `npm install` to install required libraries.
+  5. Run `wmio login` to login your webMethods.io Integration tenant.
+  6. Run `wmio test` to test the connector.
+  7. Finally, run `wmio deploy` to deploy this connector to your webMethods.io Integration tenant.
 
-Once deployed, it’ll be automatically registered with webMethods.io Integration and will be available to you locally in the Connectors panel under the Services tab.
+On successful deployment, it will be available under the Connectors list on the workflow canvas with the name **Application Simulator**.
 
-NOTE- Use `wmio unpublish` to unpublish the published connector app along with triggers and actions associated with the app.
-### AppSim Access Credentials
-If you don't have credentials to access the Application Simulator, [request here](https://daehpresal53703.hycloud.softwareag.com/AppSim/#/requestaccess). Fill in the required details and submit. You'll receive the credentials via provided email address.
+**Note** Run `wmio unpublish` to unpublish the published connector. This will remove the connector from Connectors list on the workflow canvas.
+
+For more details on how to install and deploy the connector, refer to the webMethods.io Integration documentation for [Connector Builder - Node.js CLI](https://docs.webmethods.io/integration/developer_guide/connector_builder/#gsc.tab=0)
+
+### Enhancements
+Before committing the code with fixes or enhancements, ensure the following:
+1. **App ID**, **GUID** and **Connector Connection ID** are removed from the **index.json** file.
+2. **.flowapprc** file is emptied.
+
 ## Usage
-The actions supported by Application Simulator are:
-  1. `getRecords`: To fetch records from objects. It supports Adresses, Customers, Countries, Currencies, Devices, Locations, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items, Service Requests.
-  2. `getRecordById`: To fetch record from objects using the specific id. It supports Adresses, Customers, Countries, Currencies, Devices, Locations, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items, Service Requests.
+Following actions are supported by this connector:
+  1. `getRecords`: To fetch records from objects. Objects supported are Addresses, Customers, Countries, Currencies, Devices, Locations, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items and Service Requests.
+  2. `getRecordById`: To fetch a record by id from an object. Objects supported are Addresses, Customers, Countries, Currencies, Devices, Locations, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items and Service Requests.
   3. `createPurchaseOrder`: To create a new purchase order.
   4. `createSalesOrder`: To create a new sales order.
+
+------------------------------
+
+These tools are provided as-is and without warranty or support. They do not constitute part of the Software AG product suite. Users are free to use, fork and modify them, subject to the license agreement. While Software AG welcomes contributions, we cannot guarantee to include every contribution in the master project.
