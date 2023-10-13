@@ -17,7 +17,7 @@ module.exports = {
       object: {
         title: "object",
         type: "string",
-        enum: ["Address", "Chart", "Customer", "Country", "Currency", "Device", "Inventory", "KPIMetric", "Location", "Product", "Purchase Order", "Purchase Order Item", "Sales Order", "Sales Order Item", "Service Request"], // Define the dropdown options here
+        enum: ["Address", "Chart", "Customer", "Country", "Currency", "Device", "Inventory", "KPIMetric", "Location", "Personnel", "Product", "Purchase Order", "Purchase Order Item", "Sales Order", "Sales Order Item", "Service Request"], // Define the dropdown options here
         description: "Select the object you want from the dropdown",
         minLength: 1,
       },

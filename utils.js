@@ -8,7 +8,9 @@ function removeSpacesAndLowerCase(str) {
 
 function pluralizeNoun(str) {
     // function to return plural string of noun
-    if (str.endsWith("ss")) {
+    if (str === "personnel") {
+        return str;
+    } else if (str.endsWith("ss")) {
         return str + "es";
     } else if (str.endsWith("y")) {
         return str.slice(0, -1) + "ies";
