@@ -30,8 +30,8 @@ Before committing the code with fixes or enhancements, ensure the following:
 
 ## Usage
 Following actions are supported by this connector:
-  1. `getRecords`: To fetch records from objects. Objects supported are Addresses, Charts, Customers, Countries, Currencies, Devices, Inventories, KPI Metrics, Locations, Personnel, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items and Service Requests.
-  2. `getRecordById`: To fetch a record by id from an object. Objects supported are Addresses, Customers, Countries, Currencies, Devices, Inventories, KPI Metrics, Locations, Personnel, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items and Service Requests.
+  1. `getRecords`: To fetch records from objects. Objects supported are Addresses, Charts, Countries, Currencies, Customers, Devices, Inventories, KPI Metrics, Locations, Personnel, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items and Service Requests.
+  2. `getRecordById`: To fetch a record by id from an object. Objects supported are Addresses, Countries, Currencies, Customers, Devices, Inventories, KPI Metrics, Locations, Personnel, Products, Purchase Orders, Purchase Order Items, Sales Orders, Sales Order Items and Service Requests.
   3. `createPurchaseOrder`: To create a new purchase order.
   4. `createSalesOrder`: To create a new sales order.
 
